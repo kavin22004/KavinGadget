@@ -10,7 +10,7 @@ import { productFail, productSuccess, productRequest} from '../slices/productSli
 export const getProducts = async (dispatch) => {
     try {
         dispatch(productsRequest());
-        const {data} = await axios.get('http://localhost:8000/api/products');
+        const {data} = await axios.get('https://kavingadgetserver.onrender.com/api/products');
         dispatch(productsSuccess(data));
     } catch (error) {
         console.error("Error fetching products:", error);
@@ -24,7 +24,7 @@ export const getProduct = id => async (dispatch) => {
 
     try {  
         dispatch(productRequest()) 
-        const { data }  =  await axios.get(`http://localhost:8000/api/product/${id}`);
+        const { data }  =  await axios.get(`https://kavingadgetserver.onrender.com/api/product/${id}`);
         dispatch(productSuccess(data))
     } catch (error) {
         //handle error

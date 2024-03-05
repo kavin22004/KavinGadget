@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
   
-      await axios.post('https://redigadgetsserver.onrender.com/api/login', formData);
+      await axios.post('https://kavingadgetserver.onrender.com/api/login', formData);
       toast.success('Login succesfull')
       
     } catch (error) {

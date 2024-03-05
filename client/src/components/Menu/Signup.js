@@ -24,7 +24,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      await axios.post('https://localhost:8000/api/register', formData);
+      await axios.post('https://kavingadgetserver.onrender.com/api/register', formData);
 
       toast.success('Sign Up succesfull')
     } catch (error) {
